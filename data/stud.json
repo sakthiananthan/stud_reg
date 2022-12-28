@@ -1,0 +1,28 @@
+{
+   "students": [
+      {
+         "s_no": 1,
+         "name": "sakthi",
+         "course": "python",
+         "status": "Enrolled"
+      },
+      {
+         "s_no": "2",
+         "name": "asfasdf",
+         "course": "asdf",
+         "status": "completed"
+      },
+      {
+         "s_no": "3",
+         "name": "sakthi",
+         "course": "sdg",
+         "status": "Enrolled"
+      },
+      {
+         "s_no": 4,
+         "name": "asdfasdf",
+         "course": "sadf",
+         "status": "Enrolled"
+      }
+   ]
+}

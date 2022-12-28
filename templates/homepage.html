@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script defered src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Student registration</title>
+</head>
+<body>
+    <div class="text-center">
+    <h1>Welcome to Student registration tool</h1>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-center">
+                      <h5 class="card-title">Register student</h5>
+                    </div>
+                    <form action="/register" method="post">
+                      <input required class="form-control my-3" type="text" placeholder="Enter Student name" aria-label="default input example" name="username" >
+                      <input required class="form-control my-3" type="text" placeholder="Enter Course name" aria-label="default input example" name="course">
+                      <div class="text-center">
+                      <input type="submit" class="btn btn-primary" value="Register student">
+                    </form>
+                    </div>  
+                    </div>
+                  </div>
+            </div>
+            <div class="col-9">
+                <table class="table table-dark table-hover">
+                    <tr>
+                        <th>s.no</th>
+                        <th>Student name</th>
+                        <th>Course</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                    {% for student in data %}
+                    <tr>
+                        <td>{{ student.s_no }}</td>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.course }}</td>
+                        <td>{{ student.status }}</td>
+                        <td>
+                            <a href="/update/{{ student.s_no }}" class="btn btn-warning mx-4">update</a>
+                            <a href="" class="btn btn-danger">delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

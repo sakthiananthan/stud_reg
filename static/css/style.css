@@ -1,0 +1,18 @@
+body{
+    background-color: bisque;
+}
+
+.card input[type="text"]{
+    text-align: center;
+}
+
+.card input[type="text"]::placeholder{
+    text-align: center;
+}
+
+th{
+    text-align: center;
+}
+td{
+    text-align: center;
+}
