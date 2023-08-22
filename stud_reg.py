@@ -26,7 +26,6 @@ def reg():
         json_utils.write_json(file,data)
     return redirect("/")
 
-
 @app.route("/update/<int:id>")
 def update(id):
     data=json_utils.read_json(file)
